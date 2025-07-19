@@ -41,7 +41,7 @@ def list_expenses():
         return
     print(" All Expenses:")
     for idx, expense in enumerate(expenses, 1):
-        print(f"{idx}. ₹{expense['amount']:.2f} - {expense['category']} - {expense['description']}")
+_        print(f"{idx}. ₹{expense['amount']:.2f} - {expense['category']} - {expense['description']}")
     print()
 
 # 🔻🔻🔻 FILTER BY CATEGORY FUNCTION START 🔻🔻🔻
