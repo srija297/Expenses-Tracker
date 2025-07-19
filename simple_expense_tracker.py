@@ -10,7 +10,7 @@ def view_total():
 def list_expenses():
     
     if not expenses:
-        print("📭 No expenses recorded.\n")
+        print(" No expenses recorded.\n")
         return
     print(" All Expenses:")
     for idx, expense in enumerate(expenses, 1):
