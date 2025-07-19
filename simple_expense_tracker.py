@@ -44,8 +44,23 @@ def list_expenses():
         print(f"{idx}. ₹{expense['amount']:.2f} - {expense['category']} - {expense['description']}")
     print()
 
+# 🔻🔻🔻 FILTER BY CATEGORY FUNCTION START 🔻🔻🔻
 def filter_by_category():
-    
+    if not expenses:
+        print("No expenses to filter.\n")
+        return
+
+    category = input("Enter category to filter by: ").capitalize()
+    filtered = [exp for exp in expenses if exp['category'] == category]
+
+    if not filtered:
+        print(f"No expenses found for category '{category}'.\n")
+    else:
+        print(f"\nExpenses in '{category}':")
+        for idx, expense in enumerate(filtered, 1):
+            print(f"{idx}. ₹{expense['amount']:.2f} - {expense['description']}")
+        print()
+# 🔺🔺🔺 FILTER BY CATEGORY FUNCTION END 🔺🔺🔺
     
 
 def main():
