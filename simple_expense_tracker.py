@@ -29,7 +29,7 @@ if __name__ == "__main__":
     except ValueError:
         print("Invalid input. Amount must be a number.")
 
-    
+
 def view_total():
    
     
