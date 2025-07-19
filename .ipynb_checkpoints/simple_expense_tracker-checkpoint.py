@@ -32,8 +32,7 @@ if __name__ == "__main__":
 
 def view_total():
    
-    total = sum(expense['amount'] for expense in expenses)
-    print( "Total expense:",total)
+    
 
 def list_expenses():
     
@@ -51,7 +50,7 @@ def filter_by_category():
         print("No expenses to filter.\n")
         return
 
-    category = input("Enter category to filter by: ")
+    category = input("Enter category to filter by: ").capitalize()
     filtered = [exp for exp in expenses if exp['category'] == category]
 
     if not filtered:
@@ -67,7 +66,6 @@ def filter_by_category():
 def main():
     
     print(" Welcome to Expense Tracker")
-    view_total()
     while True:
         print("1. Add Expense")
         print("2. View Total")
@@ -93,3 +91,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
